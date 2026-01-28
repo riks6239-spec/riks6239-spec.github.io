@@ -1,6 +1,6 @@
 body {
-    font-family: Arial;
-    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
 }
 
 h1 {
@@ -11,5 +11,11 @@ fieldset {
     width: 350px;
     margin: auto;
     padding: 20px;
-    background: white;
+    background-color: white;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: auto;
+    padding: 5px 15px;
 }
