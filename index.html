@@ -2,50 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Registration Website</title>
+    <title>Registration Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <h1>Application for Registration</h1>
+<h1>Application for Registration</h1>
 
-    <form>
+<form id="registrationForm">
 
-        <fieldset>
-            <legend>Registration</legend>
+    <fieldset>
+        <legend>Registration</legend>
 
-            <label>
-                Name:
-                <input type="text" placeholder="Enter your name">
-            </label>
-            <br><br>
+        <label>
+            Name:
+            <input type="text" id="name" placeholder="Enter your name" required>
+        </label>
+        <br><br>
 
-            <label>
-                Password:
-                <input type="password" placeholder="Enter password">
-            </label>
-            <br><br>
+        <label>
+            Password:
+            <input type="password" id="password" placeholder="Enter password" required>
+        </label>
+        <br><br>
 
-            <p>Class:</p>
-            <label>
-                <input type="radio" name="class"> Class XI
-            </label>
-            <label>
-                <input type="radio" name="class"> Class XII
-            </label>
+        <p>Class:</p>
+        <label><input type="radio" name="class" value="XI" required> Class XI</label>
+        <label><input type="radio" name="class" value="XII"> Class XII</label>
+        <br><br>
 
-            <p>Subjects:</p>
-            <label><input type="checkbox"> Math</label>
-            <label><input type="checkbox"> Chemistry</label>
-            <label><input type="checkbox"> Physics</label>
-            <label><input type="checkbox"> Biology</label>
+        <p>Subjects:</p>
+        <label><input type="checkbox" name="subject" value="Math"> Math</label>
+        <label><input type="checkbox" name="subject" value="Chemistry"> Chemistry</label>
+        <label><input type="checkbox" name="subject" value="Physics"> Physics</label>
+        <label><input type="checkbox" name="subject" value="Biology"> Biology</label>
+        <br><br>
 
-            <br><br>
-            <input type="submit" value="Register">
+        <input type="submit" value="Register">
+    </fieldset>
 
-        </fieldset>
-    </form>
+</form>
+
+<!-- Message -->
+<p id="message" style="text-align:center; font-weight:bold; color:green;"></p>
+
+<script>
+    const form = document.getElementById('registrationForm');
+    const message = document.getElementById('message');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // prevent actual submit
+
+        // Show safe message
+        message.textContent = "Relax! Your data will not be saved.";
+
+        // Optional: reset form
+        form.reset();
+    });
+</script>
 
 </body>
 </html>
