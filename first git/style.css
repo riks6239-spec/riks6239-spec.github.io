@@ -1,0 +1,15 @@
+body {
+    font-family: Arial;
+    background-color: #f2f2f2;
+}
+
+h1 {
+    text-align: center;
+}
+
+fieldset {
+    width: 350px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+}
